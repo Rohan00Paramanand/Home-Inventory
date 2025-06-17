@@ -18,6 +18,10 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ["home-inventory-production.up.railway.app"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://home-inventory-production.up.railway.app',
+]
+
 
 # Application definition
 
