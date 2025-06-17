@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -66,14 +67,11 @@ WSGI_APPLICATION = 'HomeStorage.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('PGDATABASE'),
-        'USER': config('PGUSER'),
-        'PASSWORD': config('PGPASSWORD'),
-        'HOST': config('PGHOST'),
-        'PORT': config('PGPORT', cast=int),
-    }
+    'default': dj_database_url.config(
+        default = config('DATABASE_URL'),
+        conn_max_age = 600,
+        ssl_require = True
+    )
 }
 
 
