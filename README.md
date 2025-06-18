@@ -1,6 +1,6 @@
 # Home Inventory
 
-Simple website that addresses a very common issue: locating where we put certain items in our houmes at the right time.
+Simple website that addresses a very common issue: locating where we put certain items in our homes at the right time.
 
 ## Features:
 ### Add Items
