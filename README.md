@@ -15,4 +15,4 @@ Remove items from the table if it no longer exists in the home
 ### Find Items
 A filtered search wherein you can find items from their spots, location and even between a range of dates.
 
-Current work: Deploying online
+Current work: Switching from Function Based Views to Class Based Views 
