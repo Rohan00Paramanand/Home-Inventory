@@ -18,14 +18,11 @@
                 <br><br>
                 <form method="POST" action="{% url 'login' %}">
                     {% csrf_token %}
-                    {{ form.non_field_errors }}
                 <div class="mb-3">
-                    {{ form.username.label_tag }}
-                    {{ form.username }}
+                    <input type="text" class="form-control" name="username" placeholder="Enter your username">
                 </div>
                 <div class="mb-3">
-                    {{ form.password.label_tag }}
-                    {{ form.password }}
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password">
                 </div>
                 <button type="submit" class="btn btn-secondary">Login</button>
                 </form>

@@ -1,12 +1,12 @@
 from django.urls import path
-from .views import HomeView, CustomLoginView, CustomLogoutView, AddItemView, EditItemView, DeleteItemView, FindItemView
+from . import views
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),
-    path('add_items/', AddItemView.as_view(), name='add_items'),
-    path('find_items/', FindItemView.as_view(), name='find_items'),
-    path('login/', CustomLoginView.as_view(), name='login'),
-    path('logout/', CustomLogoutView.as_view(), name='logout'),
-    path('delete_item/<int:pk>', DeleteItemView.as_view(), name='delete_item'),
-    path('edit_item/<int:pk>', EditItemView.as_view(), name='edit_item'),
+    path('', views.home, name='home'),
+    path('add_items/', views.add_items, name='add_items'),
+    path('find_items/', views.find_items, name='find_items'),
+    path('login/', views.login_user, name='login'),
+    path('logout/', views.logout_user, name='logout'),
+    path('delete_item/<int:pk>', views.delete_item, name='delete_item'),
+    path('edit_item/<int:pk>', views.edit_item, name='edit_item'),
 ]
